@@ -1,0 +1,552 @@
+/* General Body Styles */
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #171515;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Preloader Styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 32, 44, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dots span {
+    width: 15px;
+    height: 15px;
+    background: #4A90E2;
+    border-radius: 50%;
+    animation: bounce 0.6s infinite alternate;
+}
+
+.dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+/* WhatsApp Section Styles */
+
+.bodyWhats {
+    background-color: #060c0c;
+    background-image: url("img/Pattern1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.bodyWhats.deactive {
+    opacity: 0;
+    transform: rotateY(90deg);
+    transition: 0.5s ease;
+}
+
+/* Telegram Section Styles */
+
+.bodyTele {
+    background-color: #0b1016;
+    background-image: url("img/Pattern2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    transform: rotateY(90deg);
+}
+
+.bodyTele.active {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+/* Header Styles */
+
+.headWhats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13vh;
+    background-color: #104e37;
+}
+
+.headWhats img {
+    display: flex;
+    height: 8vh;
+}
+
+.headTele {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13vh;
+    background-color: #09658c;
+}
+
+.headTele img {
+    display: flex;
+    height: 8vh;
+}
+
+/* Buttons Container */
+
+#buttns {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+#buttns i {
+    font-size: 1.4rem;
+}
+
+/* WhatsApp & Telegram Buttons */
+
+.whats {
+    height: 60px;
+    width: 140px;
+    font-size: 1.1rem;
+    background-color: #104e37;
+    color: white;
+    cursor: pointer;
+    margin: 0.5vw;
+    border: 1.5px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.whats:hover {
+    background-color: #126245;
+    border: 1.5px solid white;
+}
+
+.whats.active {
+    background-color: #126245;
+    border: 1.5px solid white;
+}
+
+/* btn */
+.tele.active {
+    background-color: #0875a3;
+    border: 1.5px solid white;
+}
+
+.tele {
+    height: 60px;
+    width: 140px;
+    font-size: 1.1rem;
+    background-color: #09658c;
+    color: white;
+    cursor: pointer;
+    margin: 0.5vw;
+    border: 1.5px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.tele:hover {
+    background-color: #0875a3;
+    border: 1.5px solid white;
+}
+
+/* Text Styles */
+
+.text {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 10vh 0 6vh 0 ;
+    color: white;
+}
+
+/* Input Fields */
+
+.numInput {
+    background-color: white;
+    border-radius: 10px;
+    height: 60px;
+    width: 700px;
+    display: flex;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.inPut {
+    justify-items: center;
+    text-align: center;
+    margin-top: -1.5vh;
+}
+
+/* Submit Buttons */
+
+.numSubmit {
+    height: 50px;
+    width: 110px;
+    font-size: 1.1rem;
+    background-color: #104e37;
+    color: white;
+    cursor: pointer;
+    margin: 2vw;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.numSubmit:hover {
+    background-color: #126245;
+    border: 1px solid white;
+}
+
+.numSubmitTele {
+    height: 50px;
+    width: 110px;
+    font-size: 1.1rem;
+    background-color: #09658c;
+    color: white;
+    cursor: pointer;
+    margin: 2vw;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.numSubmitTele:hover {
+    background-color: #0875a3;
+    border: 1px solid white;
+}
+
+/* Footer Styles */
+
+.footerWhats {
+    background-color: #104e37;
+    color: white;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1000;
+}
+
+.footerWhats a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: -0.2px;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.footerWhats a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: #FFF;
+    transition: width 0.3s ease;
+}
+
+.footerWhats a:hover::after {
+    width: 100%;
+}
+
+.footerWhats h2 {
+    margin: 0;
+    color: white;
+    margin-top: 3vh;
+    font-size: 1.1rem;
+}
+
+.footerWhats h3 {
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    font-size: 0.9rem;
+}
+
+.footerTele {
+    background-color: #09658c;
+    color: white;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 10000;
+}
+
+.footerTele a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: -0.2px;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.footerTele a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: #FFF;
+    transition: width 0.3s ease;
+}
+
+.footerTele a:hover::after {
+    width: 100%;
+}
+
+.footerTele h2 {
+    margin: 0;
+    color: white;
+    margin-top: 3vh;
+    font-size: 1.1rem;
+}
+
+.footerTele h3 {
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    font-size: 0.9rem;
+}
+
+/* Custom Alert */
+
+#custom-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.alert-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.alert-content button {
+    background: #be2626;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+    border-radius: 10px;
+}
+
+.alert-content button:hover {
+    background: #dd3535;
+}
+
+/* Responsive Styles for Phones */
+
+@media (max-width: 480px) {
+    .bodyWhats {
+        min-height: 90vh;
+    }
+
+    .bodyTele {
+        height: 100%;
+    }
+
+    .whats {
+        height: 45px;
+        width: 90px;
+        font-size: 0.8rem;
+        margin: 0.5vw;
+        margin-top: 2vh;
+        border: 1.5px solid transparent;
+        gap: 3px;
+    }
+
+    #buttns i {
+        font-size: 1.15rem;
+    }
+
+    .tele {
+        height: 45px;
+        width: 90px;
+        font-size: 0.8rem;
+        margin: 0.5vw;
+        margin-top: 2vh;
+        border: 1.5px solid transparent;
+        gap: 3px;
+    }
+
+    .text {
+        font-size: 70%;
+        margin-top: 9vh;
+    }
+
+    .numInput {
+        height: 50px;
+        width: 80%;
+        margin-top: 2vh;
+        font-size: 1.1rem;
+    }
+
+    .numSubmit {
+        height: 45px;
+        width: 90px;
+        font-size: 1rem;
+        margin: 5vw;
+    }
+
+    .numSubmitTele {
+        height: 45px;
+        width: 90px;
+        font-size: 1rem;
+        margin: 5vw;
+    }
+
+    .footerWhats h2 {
+        margin-top: 3vh;
+        font-size: 0.7rem;
+    }
+
+    .footerWhats h3 {
+        margin-top: 1vh;
+        margin-bottom: 3vh;
+        font-size: 0.6rem;
+    }
+
+    .footerTele h2 {
+        margin-top: 3vh;
+        font-size: 0.7rem;
+    }
+
+    .footerTele h3 {
+        margin-top: 1vh;
+        margin-bottom: 3vh;
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+
+    .whats {
+        height: 50px;
+        width: 110px;
+        font-size: 0.9rem;
+        margin: 0.5vw;
+        border: 1.5px solid transparent;
+        gap: 3px;
+    }
+
+    #buttns i {
+        font-size: 1.3rem;
+    }
+
+    .tele {
+        height: 50px;
+        width: 110px;
+        font-size: 0.9rem;
+        margin: 0.5vw;
+        border: 1.5px solid transparent;
+        gap: 3px;
+    }
+
+    .text {
+        font-size: 90%;
+        margin-top: -1vh;
+    }
+
+    .numInput {
+        height: 60px;
+        width: 80%;
+        font-size: 1.4rem;
+    }
+
+    .numSubmit {
+        height: 40px;
+        width: 90px;
+        font-size: 1rem;
+        margin: 5vw;
+    }
+
+    .numSubmitTele {
+        height: 40px;
+        width: 90px;
+        font-size: 1rem;
+        margin: 5vw;
+    }
+
+    .footerWhats h2 {
+        margin-top: 3vh;
+        font-size: 0.8rem;
+    }
+
+    .footerWhats h3 {
+        margin-top: 1vh;
+        margin-bottom: 3vh;
+        font-size: 0.7rem;
+    }
+
+    .footerTele h2 {
+        margin-top: 3vh;
+        font-size: 0.8rem;
+    }
+
+    .footerTele h3 {
+        margin-top: 1vh;
+        margin-bottom: 3vh;
+        font-size: 0.7rem;
+    }
+}
